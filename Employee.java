@@ -1,20 +1,30 @@
-package com.java.examples;
+package Day2Assign;
 
-public class Employee {
-		
-			String name;
-			String desig;
-			double sal;
-			
-			Employee(String name,String desig,double sal){
-				this.name=name;
-				this.desig=desig;
-				this.sal=sal;
-			}
-			public void printDetails() {
-				System.out.println("Name: "+name+"\n"+"Desig: "+desig+"\n"+"Salary: "+sal);
-	        }
+import java.util.function.Predicate;
+
+abstract class Employee {
+
+    private String name;
+    
+    private int hoursWorked;
+
+    public Employee(String name, int hoursWorked) {
+        this.name = name;
+        this.hoursWorked = hoursWorked;
+    }
+
+    public int getHoursWorked() {
+        return hoursWorked;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public abstract double calculatePay();
 
 }
+
+	
 
 
